@@ -11,7 +11,6 @@ var prova2 = 6;
 var media;
 var telefone="993170700";
 
-
 // exercicio 2
 console.log('Olá, eu me chamo ' + nome + ', tenho ' + ano + ' anos e estou estudando Javascript.');
 // exercico 3
@@ -38,7 +37,42 @@ if(telefone.lenght <= 9){
 console.log(Math.pow(32,6));
 // exercicio 6
  
+/*
 var typeof; // ilegais porque é um caracter especial
 var nome-aluno; // ilegal porque usa -
 var 2a_tentativa; // ilegal por começar com numero
 var nome completo  // ilegal porque está separado
+
+*/
+
+// exercicio 7
+/*
+
+1 = 26
+2 = 1.75
+3 = undefined
+4 = 40
+5 = null
+6 = numeric
+
+*/
+
+// exercicio 8
+
+console.log('false');
+console.log('false');
+console.log('true');
+console.log('false');
+console.log('boolean');
+console.log('boolean');
+
+console.log("mostrando os resultado");
+
+var idade = 65;
+
+    console.log(idade != 65); 
+    console.log(idade >= 65); 
+    console.log("65" == idade);
+    console.log(65 !== idade);
+    console.log(typeof (idade > 60));
+    console.log(typeof (idade > 70));
