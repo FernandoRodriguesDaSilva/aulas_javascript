@@ -39,8 +39,16 @@ A formula de conversão é: F = (9 * C / 5) + 32
 
 
 /* Exercicio - 4
-
-
+Considere o objeto abaixo:
+    var curso = {
+        'titulo': "Aprenda programação em Python",
+        'categoria': ['programação', 'tecnologia', 'python'],
+        'n_aval_5_estrelas': 420,
+        'n_aval_4_estrelas': 80,
+        'n_aval_3_estrelas': 33,
+        'n_aval_2_estrelas': 20,
+        'n_aval_1_estrela': 4
+    }
 */
 
 
@@ -48,9 +56,16 @@ A formula de conversão é: F = (9 * C / 5) + 32
 
 
 
+
+
+
+
 /* Exercicio - 5
-
-
+Crie um objeto para guardar nome, 
+sobrenome e e-mail de uma pessoa. 
+Em seguida, crie uma função que receba o objeto como argumento e retorne um string
+com o html de uma tabela conforme o modelo abaixo.
+Em seguida Solte o html da tabela dentro elemento que tem id="tabela". 
 */
 
 
