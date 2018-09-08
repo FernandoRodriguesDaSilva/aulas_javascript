@@ -23,10 +23,12 @@ function valor_imc(peso,altura){
 }
 
 // Calculando imc usando o valor que está nas id
-var meu_peso = document.getElementById("peso").innerHTML;
-var minha_altura = document.getElementById("altura").innerHTML;
+
+// Transforma em um numero flutuavel
+var meu_peso = parseFloat(document.getElementById("peso").innerHTML);
+var minha_altura = parseFloat(document.getElementById("altura").innerHTML);
 
 // criando uma funcão pegando as variaveis
 var meu_imc = valor_imc(meu_peso,minha_altura);
 
-document.getElementById("imc").innerHTML = meu_imc;
+document.getElementById("imc").innerHTML = meu_imc.toFixed(2);
