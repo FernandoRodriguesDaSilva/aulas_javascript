@@ -1,133 +1,66 @@
+var latitude = 40.87663;
+var longitude = -8.08272;
+var nome = "joao";
+var sobrenome = "Silva";
+var telefone = "993170700010";
+var biografia = "uma historia de vida ";
+var ano_nascimento = 1994;
+var preco = 14.99;
+var numero_grande = 2.2e45; // significa 2.2x10^45
+var idade = '18';
+var vtype = true;
+var undf;
+var nome = "Fernando";
+var temperatura = 40;
 
-// Menu Mobile//////////////////////////////////////////////////////////////////////
-// Abrir menu mobile
-document.getElementById("hamburguer-icon").onclick = function(){
-  document.getElementById("sliding-header-menu-outer").style.right = "0";
-};
+console.log(latitude);
+console.log(longitude);
 
+console.log('Nome completo: ' + nome + ' ' + sobrenome);
+console.log('Telefone: ' + telefone + ' possui o uma biografia de ' + biografia);
 
-// Fechando Menu Mobile
-document.getElementById("sliding-header-menu-close-button").onclick = function(){
-  document.getElementById("sliding-header-menu-outer").style.right = "-320px";
-};
+// Aula - 4 - string
+// Pegando pelo array 
+console.log('primeira letra do nome: ' + nome[0]);
+console.log('ultima letra do nome: '+ nome[3]);
+console.log('tamanho de caracteres do telefone: ' + telefone.length);
+// Aula - 5 - number
+var num1 = 2;
+var num2 = 4;
 
-/*     Efeito deslizante      
+var soma = num1 + num2;
+var media = ((soma) / 2);
 
-.sliding-header-menu_outer{
-  right:-320px
-  width:320px;
-  overflow:hidden;
-  position: fixed;
-  transition: right 300ms ease-out;
+console.log('A média é: ' + media);
+// Operações matemáticas significa 2 elevado a 4 /// 2^4 = 16
+console.log(Math.pow(2,4))
 
-}     */
+/// incrementando valor a variavel
+var variavel = 40;
+variavel = variavel + 5;
+console.log('O valor da variavel agora é : ' + variavel);
 
-////////////////////////////////////////////////////////// Missão , Visão , Valores /////////////////////////////
+variavel+= 5;
+console.log("O valor mudou agora é: " + variavel);
 
-// About us Tab
+// converter variavel Int para o tipo string
+var ddd_string = preco.toString();
+var tel_string = ano_nascimento.toString();
+console.log(ddd_string + ' ' + tel_string)
 
-var aboutUs = {
-  "Missão": "Fazer com que cada cliente seja reconhecido como autoridade em seu segmento de atuação. Agregar valor ao negócio, potencializar o crescimento das operações e promover e estreitar o relacionamento do cliente com o seu público alvo, por meio da geração de conteúdo de relevância.",
-  "Visão": "Ser reconhecida pelos clientes e pelo mercado como uma empresa parceira, inovadora e criativa, que oferece sempre os melhores produtos e soluções em Comunicação Empresarial Integrada.",
-  "Valores": "<ul><li>Comprometimento</li><li>Inovação</li><li>Ética profissional</li><li>Superação dos resultados</li><li>Melhoria contínua</li></ul>"
-};
-
-// variaveis de cores
-var unselected_color = "#646872";
-var selected_color = "#2A2D34";
-
-var about_tags = document.getElementsByClassName("single-tab");
-
-// varre cada variavel para colocar os atributos
-for(var a = 0; a < about_tags.length; a++){
-  about_tags[a].onclick = function (){
-    // fazendo um loop para percorrer os elementos e tirar as cores de todos os eles
-    for (var b = 0; b < about_tags.length; b++){
-      about_tags[b].style['background-color'] = unselected_color;
-      about_tags[b].style['font-weight'] = "normal";
-    }
-   // dando o efeito no objeto onde está clicando
-   this.style['background-color'] = selected_color;
-   this.style['font-weight'] = "bold";
-
-// Pegando os textos para a caixa box aboutUs //
-
-var selecionado = this.innerHTML;
-
-document.getElementById("box-text").innerHTML = aboutUs[selecionado];
-
-};
-
-}
-
-// Finalizendo o box aboutUs //
-
-///////////////////// Inicio  Slider de serviços ////////////////////////////////
-
-var our_services = [
-{
-  'title': 'Webdesign',
-  'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus tincidunt sem non sodales. Nunc et quam in magna vehicula sollicitudin. Aliquam erat volutpat. Maecenas dolor mi, aliquet ac quam aliquet, condimentum dictum nisi.'
-},
-
-{
-  'title': 'Branding',
-  'text': 'Praesent finibus tincidunt sem non sodales. Nunc et quam in magna vehicula sollicitudin. Aliquam erat volutpat. Maecenas dolor mi, aliquet ac quam aliquet, condimentum dictum nisi.'
-},
-
-{
-  'title': 'Marketing Digital',
-  'text': 'Nunc et quam in magna vehicula sollicitudin. Aliquam erat volutpat. Maecenas dolor mi, aliquet ac quam aliquet, condimentum dictum nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus.'
-}
-
-];
-
-
-// id = service_previous   (seta de voltar)
-// id = service_next       ( seta de prosseguir)
-// id = service-title      ( titulo )
-// id = service-text        ( texto )
-
-var servico_atual = 0;
-
-// seta de voltar 
-
-document.getElementById("service-previous").onclick = function(){
-  if(servico_atual == 0) {
-    var servico_anterior = our_services.length - 1;
-  } else {
-    var servico_anterior = servico_atual - 1;
-  }
-
-  document.getElementById("service-title").innerHTML = our_services[servico_anterior].title;
-  document.getElementById("service-text").innerHTML = our_services[servico_anterior].text;
-  servico_atual = servico_anterior;
-
-};
-
-////////////////////////// fim seta voltar /////////////////////////////
-
-// seta proximo
-
-document.getElementById("service-next").onclick = function(){
-  if(servico_atual == our_services.length - 1) {
-    var servico_seguinte = 0;
-  } else {
-    var servico_seguinte = servico_atual + 1;
-  }
-
-  document.getElementById("service-title").innerHTML = our_services[servico_seguinte].title;
-  document.getElementById("service-text").innerHTML = our_services[servico_seguinte].text;
-  servico_atual = servico_seguinte;
-
-};
-
-
-// Data Footer
-
-
-
-
-
-
+// converter string para Int
+idade = parseInt(idade);
+idade++;
+console.log(idade);
+// tipo de variavel use typeof
+console.log(typeof vtype);
+// variavel indefinida
+console.log(undf);
+// imprimindo por array
+console.log(nome[0]);
+console.log(nome[1]);
+console.log(nome[2]);
+// apagando variavel 
+temperatura = null;
+console.log(temperatura);
 
