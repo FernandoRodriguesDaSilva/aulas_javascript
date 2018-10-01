@@ -1,0 +1,7 @@
+body{
+    background-color: rgb(167, 45, 126);
+    background-image: url(../imagens/foto.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
