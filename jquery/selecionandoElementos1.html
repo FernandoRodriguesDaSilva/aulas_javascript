@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Selecionando Elementos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src='js/jquery.js'></script>
+    <style>
+    .negrito {
+        font-weight: bold;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form input,
+    form select,
+    form button {
+        margin: 10px;
+        font-size: 1.6em;
+    }
+</style>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Selecionando Elementos #01</h1>
+    <div>
+        <p>Parágrafo
+            <span class='negrito'>dentro span</span>
+        </p>
+    </div>
+    <div>
+        <ul id='feira'>
+            <li>Arroz</li>
+            <li wm-obrigatorio>Feijão</li>
+            <li class='opcional'>Carne</li>
+            <li class='opcional'>Ovo</li>
+        </ul>
+    </div>
+    <form>
+        <input type='text' name='texto'>
+        <input type='password' name='senha'>
+        <input type='checkbox' name='check1'>
+        <input type='radio' name='radio1'>
+        <input type='file' name='arquivo'>
+    </form>
+
+    <script>
+        // aplicando a class destaque / removendo a class destaque
+        $('#feira').addClass('destaque').removeClass('destaque')
+       // aplicando a class a li
+       $('li').addClass('destaque')
+       // remove apenas a class do feijão
+       $('[wm-obrigatorio]').removeClass('destaque')
+
+       $('li.opcional').removeClass('destaque')
+
+       $('div p span').addClass('destaque')
+
+// Exclusivos JQuery
+
+// pega o primeiro li e adiciona a borda
+$('li:first').css('border','solid 3px yellow')
+// pega todos os impares e adiconar borda laranja
+$('li:odd').css('border','solid 10px orange')
+// pega todos maior que 1 e adiciona borda azul
+$('li:gt(1)').css('border','solid 12px blue')
+// Pega todos menos o ultimo elemento e trocar a cor do texto
+$('li:not(:last)').css('color','black')
+// Se dentro de um elemento contem a letra r adiciona um fundo roxo
+$('li:contains("r")').css('background-color','purple')
+
+
+// esconder o formulario
+$('form *').hide()
+// filtro de texto retorna
+$('form :text').show()
+// filtro de senha retorna
+$('form :password').show()
+// retorna checkbox
+$('form :checkbox').show()
+// retorn radio
+$('form :file').show()
+
+
+</script>
+</body>
