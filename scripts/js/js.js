@@ -54,4 +54,3 @@ console.log("Exemplo de programação assincrona")
 setTimeout(function(){// quantidade de segundos executa por último 
 	console.log("executando programaçao assicrona")}, 5000)
 console.log("Fim do exemplo assincrona.")
-
